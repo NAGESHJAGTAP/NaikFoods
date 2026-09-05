@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { API_BASE_URL } from '../config';
 
 const AuthContext = createContext(null);
 
@@ -39,14 +40,15 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem('naikfoods_user');
   };
 
-  // Helper fetch wrapper that automatically injects Bearer token
+  // Helper fetch wrapper that automatically injects Bearer token and handles API_BASE_URL
   const authFetch = async (url, options = {}) => {
+    const fullUrl = url.startsWith('http') ? url : `${API_BASE_URL}${url.startsWith('/') ? '' : '/'}${url}`;
     const headers = {
       'Content-Type': 'application/json',
       ...(token ? { Authorization: `Bearer ${token}` } : {}),
       ...(options.headers || {})
     };
-    return fetch(url, { ...options, headers });
+    return fetch(fullUrl, { ...options, headers });
   };
 
   return (

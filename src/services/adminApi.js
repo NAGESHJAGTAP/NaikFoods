@@ -1,4 +1,6 @@
-const BASE = '/api/admin';
+import { API_BASE_URL } from '../config';
+
+const BASE = `${API_BASE_URL}/api/admin`;
 
 const getHeaders = () => {
   const token = localStorage.getItem('adminToken');
@@ -38,7 +40,7 @@ export const fetchAdminProducts = () =>
   fetch(`${BASE}/products`, { headers: getHeaders() }).then(handleRes);
 
 export const createAdminProduct = (data) =>
-  fetch('/api/products', { method: 'POST', headers: getHeaders(), body: JSON.stringify(data) }).then(handleRes);
+  fetch(`${API_BASE_URL}/api/products`, { method: 'POST', headers: getHeaders(), body: JSON.stringify(data) }).then(handleRes);
 
 export const updateAdminProduct = (id, data) =>
   fetch(`${BASE}/products/${id}`, { method: 'PUT', headers: getHeaders(), body: JSON.stringify(data) }).then(handleRes);

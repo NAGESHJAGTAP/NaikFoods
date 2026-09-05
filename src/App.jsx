@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Search, X, RotateCcw, Check } from 'lucide-react';
+import { API_BASE_URL } from './config';
 
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Navbar from './components/Navbar';
@@ -97,8 +98,8 @@ export default function App() {
     setLoading(true);
     try {
       const [prodRes, recipeRes] = await Promise.all([
-        fetch('/api/products'),
-        fetch('/api/recipes')
+        fetch(`${API_BASE_URL}/api/products`),
+        fetch(`${API_BASE_URL}/api/recipes`)
       ]);
 
       const prodData = await prodRes.json();

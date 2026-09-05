@@ -1,4 +1,6 @@
-const BASE = '/api/admin';
+import { API_BASE_URL } from '../config';
+
+const BASE = `${API_BASE_URL}/api/admin`;
 
 const getHeaders = () => {
   const token = localStorage.getItem('adminToken');
@@ -26,10 +28,8 @@ export const fetchDashboard = () =>
 export const fetchSalesChart = (period = '7days') =>
   fetch(`${BASE}/sales-chart?period=${period}`, { headers: getHeaders() }).then(handleRes);
 
-export const fetchAdminOrders = (params = {}) => {
-  const q = new URLSearchParams(params).toString();
-  return fetch(`${BASE}/orders?${q}`, { headers: getHeaders() }).then(handleRes);
-};
+export const fetchAdminOrders = (status) =>
+  fetch(`${BASE}/orders${status ? `?status=${status}` : ''}`, { headers: getHeaders() }).then(handleRes);
 
 export const updateOrderStatus = (id, status) =>
   fetch(`${BASE}/orders/${id}/status`, { method: 'PATCH', headers: getHeaders(), body: JSON.stringify({ status }) }).then(handleRes);
@@ -38,7 +38,7 @@ export const fetchAdminProducts = () =>
   fetch(`${BASE}/products`, { headers: getHeaders() }).then(handleRes);
 
 export const createAdminProduct = (data) =>
-  fetch('/api/products', { method: 'POST', headers: getHeaders(), body: JSON.stringify(data) }).then(handleRes);
+  fetch(`${API_BASE_URL}/api/products`, { method: 'POST', headers: getHeaders(), body: JSON.stringify(data) }).then(handleRes);
 
 export const updateAdminProduct = (id, data) =>
   fetch(`${BASE}/products/${id}`, { method: 'PUT', headers: getHeaders(), body: JSON.stringify(data) }).then(handleRes);
