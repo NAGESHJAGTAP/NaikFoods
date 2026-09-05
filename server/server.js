@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import path from 'path';
 import jwt from 'jsonwebtoken';
+import mongoose from 'mongoose';
 import { fileURLToPath } from 'url';
 import { initialProducts, recipesData, seedOrders } from './data/products.js';
 
@@ -12,6 +13,12 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const JWT_SECRET = process.env.JWT_SECRET || 'swadyatra_admin_secret_2026';
 const USER_JWT_SECRET = process.env.USER_JWT_SECRET || 'swadyatra_user_secret_2026';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://test:test123@cluster0.kwbnz.mongodb.net/naikfoods?retryWrites=true&w=majority';
+
+// ─── MongoDB Atlas Connection ──────────────────────────────────────────────
+mongoose.connect(MONGODB_URI, { serverSelectionTimeoutMS: 5000 })
+  .then(() => console.log('🍃 Connected to MongoDB Atlas: cluster0.kwbnz.mongodb.net/naikfoods'))
+  .catch((err) => console.log('⚠️ MongoDB Connection Notice (using hybrid store):', err.message));
 
 // Admin credentials
 const ADMIN_EMAIL = 'admin@naikfoods.com';
