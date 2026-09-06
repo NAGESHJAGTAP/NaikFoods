@@ -1,7 +1,6 @@
-# 📊 Comprehensive Website Analysis & Product Recommendation Report
-**Reference Website Studied**: [https://www.naikfoods.co.in/in](https://www.naikfoods.co.in/in)  
+# 📊 Comprehensive Website Analysis & Product Recommendation Report  
 **Brand Studied**: Naik Foods (Authentic Maharashtrian Delicacies, Masalas, Pickles, & Snacks)  
-**Prepared For**: Full Stack MERN Internship Task — BITS AND VOLTS PRIVATE LIMITED  
+**Prepared For**: Full Stack MERN Project  
 **Candidate Name**: Full Stack Developer Candidate  
 **Date**: September 2026  
 
