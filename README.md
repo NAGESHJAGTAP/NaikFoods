@@ -1,7 +1,6 @@
-# 🚩 Naik Foods — Full-Stack MERN E-Commerce & Admin Dashboard
+#  Naik Foods — Full-Stack MERN E-Commerce & Admin Dashboard
 
-> **Full Stack MERN Internship Task Submission** for **Bits and Volts Private Limited**  
-> Study, analysis, and working prototype development inspired by [Naik Foods (naikfoods.co.in/in)](https://www.naikfoods.co.in/in).
+> **Full Stack MERN project**  
 
 ---
 
