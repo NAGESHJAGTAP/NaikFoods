@@ -8,7 +8,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'https://naikfoods-1.onrender.com',
+        target: 'https://naikfoods-3.onrender.com',
         changeOrigin: true,
         secure: true,
       }
