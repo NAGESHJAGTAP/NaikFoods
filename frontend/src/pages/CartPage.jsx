@@ -29,7 +29,7 @@ const CartPage = ({
     if (couponCode.trim().toUpperCase() === 'SWAD10' || couponCode.trim().toUpperCase() === 'NAIK10') {
       setCouponApplied(true);
     } else {
-      setCouponError('Invalid coupon code. Try "SWAD10" for 10% off.');
+      setCouponError('Invalid coupon code. Try "NAIK10" for 10% off.');
     }
   };
 
@@ -255,7 +255,7 @@ const CartPage = ({
                     type="text"
                     value={couponCode}
                     onChange={(e) => setCouponCode(e.target.value)}
-                    placeholder="Try SWAD10"
+                    placeholder="Try NAIK10"
                     disabled={couponApplied}
                     className="flex-1 px-3 py-2 bg-stone-50 border border-stone-300 rounded-xl text-sm uppercase placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
                   />

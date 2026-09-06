@@ -24,7 +24,7 @@ export default function RecipePairings({ recipes, products, onAddMultipleToCart,
               <span>{isMarathi ? "पाककृती जोडणी" : "Recipe-to-Cart Pairing Engine"}</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold mt-1 font-heading">
-              {isMarathi ? "स्वाद्यात्रा सोबत बनवा अस्सल पदार्थ 🍲" : "Cook Authentic Dishes with SwadYatra 🍲"}
+              {isMarathi ? "नाईक फूड्स सोबत बनवा अस्सल पदार्थ 🍲" : "Cook Authentic Dishes with Naik Foods 🍲"}
             </h2>
           </div>
           <p className="text-xs text-zinc-400 max-w-md">

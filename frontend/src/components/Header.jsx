@@ -25,14 +25,14 @@ export default function Header({
           {/* Original Brand Logo */}
           <a href="#" className="flex items-center gap-2.5 group">
             <div className="w-10 h-10 rounded-xl bg-saffron-600 flex items-center justify-center text-white font-extrabold text-xl shadow-md shadow-saffron-600/30 group-hover:scale-105 transition-transform">
-              S
+              N
             </div>
             <div className="flex flex-col text-left">
               <span className="text-xl font-extrabold tracking-tight text-zinc-900 dark:text-white flex items-center gap-1 font-heading">
-                SWAD<span className="text-saffron-600">YATRA</span>
+                NAIK<span className="text-saffron-600">FOODS</span>
               </span>
               <span className="text-[10px] uppercase font-bold tracking-widest text-zinc-500 dark:text-zinc-400">
-                {isMarathi ? "अस्सल प्रादेशिक चव" : "Regional Spice Discovery Engine"}
+                {isMarathi ? "अस्सल महाराष्ट्रीयन चव" : "Authentic Maharashtrian Heritage"}
               </span>
             </div>
           </a>

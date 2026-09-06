@@ -77,7 +77,7 @@ export default function Hero({ isMarathi, onOpenBoxBuilder }) {
           <div className="relative mx-auto max-w-sm rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-zinc-900/80 p-4">
             <img
               src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=800"
-              alt="SwadYatra Spices"
+              alt="Naik Foods Spices"
               className="w-full h-64 sm:h-72 object-cover rounded-2xl"
             />
             
