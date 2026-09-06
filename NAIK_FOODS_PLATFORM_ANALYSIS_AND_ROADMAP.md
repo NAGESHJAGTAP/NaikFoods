@@ -1,6 +1,5 @@
 # Naik Foods Platform Analysis, Technical Architecture, and Strategic Roadmap
 
-Reference Website: https://www.naikfoods.co.in/in  
 Brand: Naik Foods (Flagship Store: Shukrawar Peth, Pune, Maharashtra)  
 Prepared For: Full Stack MERN Platform Modernization and Evaluation  
 Project Architecture: SwadYatra MERN Platform (React 19, Vite, Express.js, MongoDB, Cloudinary CDN)  
