@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchAdminOrders, updateOrderStatus } from '../../services/adminApi';
-import { Search, RefreshCw, ChevronDown } from 'lucide-react';
+import { Search, RefreshCw, ChevronDown, ShoppingCart } from 'lucide-react';
 
 const STATUSES = ['All', 'Confirmed', 'Processing', 'Shipped', 'Out for Delivery', 'Delivered', 'Cancelled'];
 
