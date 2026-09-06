@@ -218,12 +218,12 @@ app.get('/api/products/:id', (req, res) => {
 });
 
 // GET Recipes
-app.get('/api/recipes', (req, res) => {
+app.get(['/api/recipes', '/api/products/recipes'], (req, res) => {
   res.json({ success: true, recipes });
 });
 
 // POST Custom Combo Box Calculation
-app.post('/api/custom-box', (req, res) => {
+app.post(['/api/custom-box', '/api/combos/calculate'], (req, res) => {
   const { selectedProductIds } = req.body;
   if (!selectedProductIds || !Array.isArray(selectedProductIds))
     return res.status(400).json({ success: false, message: 'Invalid product selection' });
@@ -358,7 +358,7 @@ app.patch('/api/orders/:orderId/cancel', verifyUser, (req, res) => {
 });
 
 // Legacy analytics endpoint (keep for backward compat)
-app.get('/api/analytics', (req, res) => {
+app.get(['/api/analytics', '/api/orders/analytics'], (req, res) => {
   const validOrders = orders.filter(o => o.status !== 'Cancelled');
   res.json({
     success: true,
